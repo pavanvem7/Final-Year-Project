@@ -1,0 +1,28 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+
+{% block title %}Q-A System{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <h1><center>Question Answering System in English Language</center></h1>
+  <hr>
+  <br>
+  <br>
+  <br>
+  <h2 style="color:blue;"><center>What's your Question?</center></h2>
+  <center>
+  {{ wtf.quick_form(form, button_map={'submit_button': 'success'}) }}
+</center>
+</div>
+
+
+
+{% endblock %}
+
+{% block head %}
+{{super()}}
+{{fixes.ie8()}}
+{% endblock %}
